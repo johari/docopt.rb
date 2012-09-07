@@ -446,7 +446,7 @@ module Docopt
         else
           if raw == ''
             if tokens.current() == nil
-              raise tokens.error, "-#{opt.short.slice(0, 1)} requires argument"
+              raise tokens.error, "-#{opt.short.slice(1)} requires argument"
             end
             raw = tokens.move()
           end
